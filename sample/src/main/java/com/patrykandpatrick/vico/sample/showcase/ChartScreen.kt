@@ -78,7 +78,10 @@ internal fun ChartScreen(
         },
         bottomBar = {
             Row(
-                Modifier.fillMaxWidth().navigationBarsPadding().height(64.dp),
+                Modifier
+                    .fillMaxWidth()
+                    .navigationBarsPadding()
+                    .height(64.dp),
                 Arrangement.spacedBy(4.dp, Alignment.CenterHorizontally),
                 Alignment.CenterVertically,
             ) {
@@ -112,7 +115,7 @@ internal fun ChartScreen(
                 val arguments = requireNotNull(backStackEntry.arguments)
                 charts[arguments.getInt("chartID")](
                     UISystem.entries[uiSystemID],
-                    Modifier.padding(horizontal = 16.dp),
+                    Modifier,
                 )
             }
         }
